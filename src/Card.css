@@ -1,17 +1,31 @@
 img {
-	max-height: 500px;
+	max-height: 300px;
 }
 .card-container {
   margin: 10px;
   padding: 20px;
-  font-weight: 500;
+  font-weight: 600;
+  line-height: 10px;
   cursor: pointer;
   box-sizing: border-box;
 }
+.green {
+  color: green;
+}
+
+.yellow {
+  color: yellow;
+}
+
+.orange {
+  color: orange;
+}
+
+.red {
+  color: red;
+}
+
 @media screen and (max-width: 600px) {
-  img {
-    max-height: 300px;
-  }
   .card-container {
     padding: 20px 50px;
   }
