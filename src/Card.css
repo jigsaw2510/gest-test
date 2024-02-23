@@ -2,10 +2,17 @@ img {
 	max-height: 500px;
 }
 .card-container {
-  margin: 20px 10px 10px 20px;
+  margin: 10px;
   padding: 20px;
   font-weight: 500;
   cursor: pointer;
   box-sizing: border-box;
 }
-
+@media screen and (max-width: 600px) {
+  img {
+    max-height: 300px;
+  }
+  .card-container {
+    padding: 20px 50px;
+  }
+}
