@@ -15,5 +15,6 @@ code {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  padding: 10px;
+  width: 100%;
+  justify-content: center;
 }

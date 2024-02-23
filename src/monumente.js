@@ -5,7 +5,8 @@ export const monumente = [
     code: 'CT1',
     dimensions: '120x45x6',
     retailPrice: '1000 LEI',
-    partnersPrice: '500 LEI'
+    partnersPrice: '500 LEI',
+    image: "ct1.png"
   },
   {
     id: 2,
@@ -13,7 +14,8 @@ export const monumente = [
     code: 'CT2',
     dimensions: '130x55x6',
     retailPrice: '1100 LEI',
-    partnersPrice: '600 LEI'
+    partnersPrice: '600 LEI',
+    image: "ct1.png"
   },
   {
     id: 3,
@@ -21,7 +23,8 @@ export const monumente = [
     code: 'CT3',
     dimensions: '130x55x8',
     retailPrice: '1200 LEI',
-    partnersPrice: '700 LEI'
+    partnersPrice: '700 LEI',
+    image: "ct1.png"
   },
   {
     id: 4,
@@ -29,31 +32,44 @@ export const monumente = [
     code: 'CT4',
     dimensions: '140x60x8',
     retailPrice: '1300 LEI',
-    partnersPrice: '800 LEI'
+    partnersPrice: '800 LEI',
+    image: "ct1.png"
   },
   {
     id: 5,
-    name: 'Chelsey Dietrich',
-    username: 'Kamren',
-    email: 'Lucio_Hettinger@annie.ca'
+    name: 'Clasic Drept',
+    code: 'CD1',
+    dimensions: '120x45x6',
+    retailPrice: '1000 LEI',
+    partnersPrice: '500 LEI',
+    image: "cd.png"
   },
   {
     id: 6,
-    name: 'Mrs. Dennis Schulist',
-    username: 'Leopoldo_Corkery',
-    email: 'Karley_Dach@jasper.info'
+    name: 'Clasic Drept',
+    code: 'CD2',
+    dimensions: '130x55x6',
+    retailPrice: '1100 LEI',
+    partnersPrice: '600 LEI',
+    image: "cd.png"
   },
   {
     id: 7,
-    name: 'Kurtis Weissnat',
-    username: 'Elwyn.Skiles',
-    email: 'Telly.Hoeger@billy.biz'
+    name: 'Clasic Drept',
+    code: 'CD3',
+    dimensions: '130x55x8',
+    retailPrice: '1200 LEI',
+    partnersPrice: '700 LEI',
+    image: "cd.png"
   },
   {
     id: 8,
-    name: 'Nicholas Runolfsdottir V',
-    username: 'Maxime_Nienow',
-    email: 'Sherwood@rosamond.me'
+    name: 'Clasic Drept',
+    code: 'CD4',
+    dimensions: '140x60x8',
+    retailPrice: '1300 LEI',
+    partnersPrice: '800 LEI',
+    image: "cd.png"
   },
   {
     id: 9,

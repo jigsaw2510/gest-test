@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import ReactCardFlip from 'react-card-flip';
 import './Card.css';
 
-const Card = ({ id, name, code, dimensions, retailPrice, partnersPrice }) => {
+const Card = ({ id, name, code, dimensions, retailPrice, partnersPrice, image }) => {
   const [isFlipped, setFlipped] = useState(false);
 
   const handleFlip = () => {
@@ -14,11 +14,11 @@ const Card = ({ id, name, code, dimensions, retailPrice, partnersPrice }) => {
       {/* Front Side */}
       <div
         key="front"
-        className="tc bg-light-green dib br3 pa3 ma2 grow bw2 shadow-5 card-container"
+        className="tc bg-light-green dib br3 grow bw2 shadow-5 card-container"
         onClick={handleFlip}
       >
         <div className="img-container">
-          <img alt='robots' src='ct1.png' />
+          <img src={process.env.PUBLIC_URL + `/${image}`} alt="CT1" />
         </div>
         <h2>{name}</h2>
         <p>{code}</p>
@@ -29,11 +29,11 @@ const Card = ({ id, name, code, dimensions, retailPrice, partnersPrice }) => {
       {/* Back Side */}
       <div
         key="back"
-        className="tc bg-light-green dib br3 pa3 ma2 grow bw2 shadow-5 card-container"
+        className="tc bg-light-green dib br3 grow bw2 shadow-5 card-container"
         onClick={handleFlip}
       >
         <div className="img-container">
-          <img alt='robots' src='ct1.png' />
+          <img src={process.env.PUBLIC_URL + `/${image}`} alt="CT1" />
         </div>
         <h2>{name}</h2>
         <p>{code}</p>
