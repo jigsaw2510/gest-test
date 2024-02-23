@@ -24,8 +24,8 @@ const Card = ({ id, name, code, dimensions, retailPrice, partnersPrice, image, s
         <h2>{name}</h2>
         <p>{code}</p>
         <p>Dimensiuni: {dimensions}</p>
-        <p className={cardClassName} style={{fontSize: "1.3em"}}>Stoc: {stock}</p>
         <p>Pret: {retailPrice}</p>
+        <p className={cardClassName} style={{fontSize: "1.3em"}}>Stoc: {stock}</p>
       </div>
 
       {/* Back Side */}
@@ -40,8 +40,8 @@ const Card = ({ id, name, code, dimensions, retailPrice, partnersPrice, image, s
         <h2>{name}</h2>
         <p>{code}</p>
         <p>Dimensiuni: {dimensions}</p>
-        <p className={cardClassName} style={{fontSize: "1.3em"}}>Stoc: {stock}</p>
         <p style={{color: "red"}}>Pret: {partnersPrice}</p>
+        <p className={cardClassName} style={{fontSize: "1.3em"}}>Stoc: {stock}</p>
       </div>
     </ReactCardFlip>
   );
