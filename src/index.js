@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import CardList from './CardList.js'
+import App from './App'
 import reportWebVitals from './reportWebVitals';
 import 'tachyons';
 import { monumente } from './monumente';
@@ -13,7 +13,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <div>
-      <CardList monumente={monumente} />
+      <App />
     </div>
   </React.StrictMode>
 );
