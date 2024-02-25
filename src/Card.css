@@ -5,9 +5,10 @@ img {
   margin: 10px;
   padding: 20px;
   font-weight: 600;
-  line-height: 10px;
   cursor: pointer;
   box-sizing: border-box;
+  width: 300px;
+  height: 600px;
 }
 .green {
   color: green;
@@ -26,7 +27,13 @@ img {
 }
 
 @media screen and (max-width: 600px) {
+  img {
+    max-height: 200px;
+  }
   .card-container {
     padding: 20px 50px;
+    width: 250px;
+    height: 400px;
+    font-size: 0.7em;
   }
 }

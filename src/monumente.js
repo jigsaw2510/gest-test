@@ -98,5 +98,65 @@ export const monumente = [
     partnersPrice: '600 LEI',
     image: "cb.png",
     stock: 0
+  },
+  {
+    id: 11,
+    name: 'Trifoi Arcada cu trandafir',
+    code: 'TA2',
+    dimensions: '130x55x6',
+    retailPrice: '1100 LEI',
+    partnersPrice: '600 LEI',
+    image: "ta.png",
+    stock: 1
+  },
+  {
+    id: 12,
+    name: 'Trifoi Arcada cu trandafir',
+    code: 'TA3',
+    dimensions: '130x55x8',
+    retailPrice: '1200 LEI',
+    partnersPrice: '700 LEI',
+    image: "ta.png",
+    stock: 0
+  },
+  {
+    id: 13,
+    name: 'Trifoi Arcada cu trandafir',
+    code: 'TA4',
+    dimensions: '140x60x8',
+    retailPrice: '1300 LEI',
+    partnersPrice: '800 LEI',
+    image: "ta.png",
+    stock: 3
+  },
+  {
+    id: 14,
+    name: 'Oval Bizantin',
+    code: 'O2',
+    dimensions: '130x55x6',
+    retailPrice: '1100 LEI',
+    partnersPrice: '600 LEI',
+    image: "o.png",
+    stock: 10
+  },
+  {
+    id: 15,
+    name: 'Oval Bizantin',
+    code: 'O3',
+    dimensions: '130x55x8',
+    retailPrice: '1200 LEI',
+    partnersPrice: '700 LEI',
+    image: "o.png",
+    stock: 4
+  },
+  {
+    id: 16,
+    name: 'Oval Bizantin',
+    code: 'O4',
+    dimensions: '140x60x8',
+    retailPrice: '1300 LEI',
+    partnersPrice: '800 LEI',
+    image: "o.png",
+    stock: 2
   }
 ];
