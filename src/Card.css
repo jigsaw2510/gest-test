@@ -7,6 +7,10 @@ h2 {
 span {
   line-height: 22px;
 }
+p {
+  position: absolute;
+  bottom: 0;
+}
 .card-container {
   margin: 10px;
   padding: 20px;
@@ -14,7 +18,7 @@ span {
   cursor: pointer;
   box-sizing: border-box;
   width: 250px;
-  height: 500px;
+  height: 520px;
 }
 .green {
   color: green;
@@ -38,6 +42,6 @@ span {
   }
   .card-container {
     width: 250px;
-    height: 400px;
+    height: 420px;
   }
 }
