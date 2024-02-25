@@ -1,14 +1,20 @@
 img {
 	max-height: 300px;
 }
+h2 {
+  margin-bottom: 0;
+}
+span {
+  line-height: 22px;
+}
 .card-container {
   margin: 10px;
   padding: 20px;
   font-weight: 600;
   cursor: pointer;
   box-sizing: border-box;
-  width: 300px;
-  height: 600px;
+  width: 250px;
+  height: 500px;
 }
 .green {
   color: green;
@@ -31,9 +37,7 @@ img {
     max-height: 200px;
   }
   .card-container {
-    padding: 20px 50px;
     width: 250px;
     height: 400px;
-    font-size: 0.7em;
   }
 }
