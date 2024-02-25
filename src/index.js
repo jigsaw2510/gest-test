@@ -4,7 +4,6 @@ import './index.css';
 import App from './App'
 import reportWebVitals from './reportWebVitals';
 import 'tachyons';
-import { monumente } from './monumente';
 
 // Set the title before rendering React components
 document.title = 'Gest';

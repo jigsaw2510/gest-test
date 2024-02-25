@@ -1,0 +1,16 @@
+@font-face {
+  font-family: 'coulson-condensed';
+  src: url('./Coulson-Condensed.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'coulson';
+  src: url('./Coulson.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+h1 {
+  font-family: 'coulson', sans-serif;
+  color: #666;
+}
