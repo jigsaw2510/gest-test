@@ -55,7 +55,7 @@ const Card = ({ id, fontColor }) => {
         onClick={handleFlip}
       >
         <div className="img-container">
-          <img src={process.env.PUBLIC_URL + `/${image}`} alt="CT1" />
+          <img src={process.env.PUBLIC_URL + `/images/${image}`} alt="CT1" />
         </div>
         <h2>{name}</h2>
         <span>{code}</span><br />
@@ -71,7 +71,7 @@ const Card = ({ id, fontColor }) => {
         onClick={handleFlip}
       >
         <div className="img-container">
-          <img src={process.env.PUBLIC_URL + `/${image}`} alt="CT1" />
+          <img src={process.env.PUBLIC_URL + `/images/${image}`} alt="CT1" />
         </div>
         <h2>{name}</h2>
         <span>{code}</span><br />
