@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from './Card.js';
 
-const CardList = ({ monumente }) => {
+const CardList = ({ monumente, updateStock }) => {
   return (
     <div className="main-container">
       {monumente.map((monument, i) => {
@@ -28,6 +28,7 @@ const CardList = ({ monumente }) => {
             image={monument.image}
             stock={monument.stock}
             fontColor={fontColor} // Pass fontColor as a prop
+            updateStock={updateStock}
           />
         );
       })}

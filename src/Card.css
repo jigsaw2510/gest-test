@@ -1,7 +1,9 @@
 img {
-	max-height: 300px;
+  max-height: 300px;
 }
 h2 {
+  display: block;
+  margin-top: 0;
   margin-bottom: 0;
 }
 span {
@@ -10,6 +12,14 @@ span {
 p {
   position: absolute;
   bottom: 0;
+}
+button {
+  width: 40%;
+  padding: 2px;
+}
+#pret {
+  display: inline-block;
+  margin-bottom: 5px;
 }
 .card-container {
   margin: 10px;

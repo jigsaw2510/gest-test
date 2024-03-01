@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import ReactCardFlip from 'react-card-flip';
-import { ref, get } from 'firebase/database'; // Correct import syntax
+import { ref, get, set } from 'firebase/database';
 import { getDatabase } from 'firebase/database';
 import { database } from './firebase'; // Import the Firebase database instance
 import './Card.css';
 
-const Card = ({ id, fontColor }) => {
+const Card = ({ id, fontColor, updateStock }) => {
   const [isFlipped, setFlipped] = useState(false);
   const [cardData, setCardData] = useState(null);
 
@@ -31,12 +31,27 @@ const Card = ({ id, fontColor }) => {
     };
 
     fetchData();
-  }, [id]);
+  }, [id, isFlipped]);
   /* Fetching data end */
 
-  const handleFlip = () => {
-    setFlipped(!isFlipped);
+  const handleFlip = (event) => {
+    // Check if the click target is one of the buttons
+    if (!event.target.classList.contains('add-button') && !event.target.classList.contains('subtract-button')) {
+      setFlipped(!isFlipped);
+    }
   };
+
+  /*Stock management code*/
+  const handleAddStock = () => {
+    // Update stock in the database
+    updateStock(id, cardData.stock + 1);
+  };
+  const handleSubtractStock = () => {
+    // Update stock in the database
+    updateStock(id, cardData.stock - 1);
+  };
+
+  /*Stock management code end*/
 
   if (!cardData) {
     return null; // Handle the case where data is still being fetched
@@ -57,11 +72,13 @@ const Card = ({ id, fontColor }) => {
         <div className="img-container">
           <img src={process.env.PUBLIC_URL + `/images/${image}`} alt="CT1" />
         </div>
-        <h2>{name}</h2>
-        <span>{code}</span><br />
+        <h2>{code}</h2>
+        <span>{name}</span><br />
         <span>Dimensiuni: {dimensions}</span><br />
-        <span>Pret: {retailPrice}</span><br />
+        <span id="pret">Pret: {retailPrice}</span><br />
         <p className={cardClassName} style={{ fontSize: "1.3em" }}>Stoc: {stock}</p>
+        <button onClick={handleAddStock}>ADAUGA</button>
+        <button onClick={handleSubtractStock}>SCADE</button>
       </div>
 
       {/* Back Side */}
@@ -73,11 +90,13 @@ const Card = ({ id, fontColor }) => {
         <div className="img-container">
           <img src={process.env.PUBLIC_URL + `/images/${image}`} alt="CT1" />
         </div>
-        <h2>{name}</h2>
-        <span>{code}</span><br />
+        <h2>{code}</h2>
+        <span>{name}</span><br />
         <span>Dimensiuni: {dimensions}</span><br />
         <span style={{ color: "red" }}>Pret: {partnersPrice}</span><br />
         <p className={cardClassName} style={{ fontSize: "1.3em" }}>Stoc: {stock}</p>
+        <button onClick={handleAddStock}>ADAUGA</button>
+        <button onClick={handleSubtractStock}>SCADE</button>
       </div>
     </ReactCardFlip>
   );

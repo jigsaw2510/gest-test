@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import CardList from './CardList';
 import SearchBox from './SearchBox';
-import { getDatabase, ref, get } from 'firebase/database';
+import { getDatabase, ref, get, set } from 'firebase/database';
 import './App.css';
+import Navigation from './Navigation';
+import Footer from './Footer';
 
 class App extends Component {
   constructor() {
@@ -33,11 +35,42 @@ class App extends Component {
 
   componentDidMount() {
     this.fetchDataFromFirebase();
+    this.setState({ monumente: [] }); // Ensure it starts as an empty array
   }
 
   onSearchChange = (event) => {
     this.setState({ searchfield: event.target.value });
   };
+
+  /*Stock management code*/
+  updateStockInFirebase = async (productId, newStockValue) => {
+    const db = getDatabase();
+    const productRef = ref(db, `${productId - 1}/stock`);
+
+    try {
+      // Update stock in the database
+      await set(productRef, newStockValue);
+
+      // Fetch the updated data from Firebase
+      const updatedSnapshot = await get(ref(db, `${productId - 1}`));
+      const updatedData = updatedSnapshot.val();
+
+      // Update local state with the latest data
+      this.setState((prevState) => {
+        const updatedMonumente = prevState.monumente.map((monument) => {
+          if (monument.id === productId) {
+            return { ...monument, stock: updatedData.stock };
+          }
+          return monument;
+        });
+
+        return { monumente: updatedMonumente };
+      });
+    } catch (error) {
+      console.error('Error updating stock in Firebase:', error);
+    }
+  };
+  /*Stock management code end*/
 
   render() {
     const filteredmonumente = this.state.monumente.filter((monument) => {
@@ -49,11 +82,14 @@ class App extends Component {
     });
 
     return (
-      <div className="tc">
+      <div className="tc app-container">
+        <Navigation />
         <h1>Monumente Funerare</h1>
         <SearchBox searchChange={this.onSearchChange} />
-        <CardList monumente={filteredmonumente} />
+        <CardList monumente={filteredmonumente} updateStock={this.updateStockInFirebase} />
+        <Footer />
       </div>
+
     );
   }
 }
