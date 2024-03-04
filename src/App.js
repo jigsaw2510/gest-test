@@ -5,6 +5,7 @@ import { getDatabase, ref, get, set } from 'firebase/database';
 import './App.css';
 import Navigation from './Navigation';
 import Footer from './Footer';
+import RightClickDisable from './RightClickDisable';
 
 class App extends Component {
   constructor() {
@@ -88,6 +89,7 @@ class App extends Component {
         <SearchBox searchChange={this.onSearchChange} />
         <CardList monumente={filteredmonumente} updateStock={this.updateStockInFirebase} />
         <Footer />
+        <RightClickDisable />
       </div>
 
     );
