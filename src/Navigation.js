@@ -13,7 +13,7 @@ const Navigation = () => {
 			<nav>
       <div className="container">
         <ul className={isMenuOpen ? 'nav-links open' : 'nav-links'}>
-          <li><Link to="/" onClick={() => setMenuOpen(false)}>Monumente</Link></li>
+          <li><Link to="" onClick={() => setMenuOpen(false)}>Monumente</Link></li>
           <li><Link to="/About" onClick={() => setMenuOpen(false)}>Masive</Link></li>
           <li><Link to="/Contact" onClick={() => setMenuOpen(false)}>Istoric Modificari</Link></li>
         </ul>
