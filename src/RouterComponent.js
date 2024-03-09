@@ -1,6 +1,6 @@
 // RouterComponent.js
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import About from './About';     // Make sure the path is correct
 import Contact from './Contact'; // Make sure the path is correct
 import App from './App';         // Make sure the path is correct
