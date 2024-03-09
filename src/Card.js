@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ReactCardFlip from 'react-card-flip';
-import { ref, get, set } from 'firebase/database';
+import { ref, get } from 'firebase/database';
 import { getDatabase } from 'firebase/database';
 import { database } from './firebase'; // Import the Firebase database instance
 import './Card.css';
@@ -55,7 +55,7 @@ const Card = ({ id, fontColor, updateStock }) => {
     const formattedDate = `${formattedHours}:${formattedMinutes}, ${currentDate.getDate()}-${currentDate.getMonth() + 1}-${currentDate.getFullYear()}`;
 
     // Print to console.log
-    console.log('Adaugare:', formattedDate, code);
+    console.log('Adaugare:', formattedDate, code, `Stoc:${stock}`);
     }
 
   const handleSubtractStock = () => {
@@ -71,7 +71,7 @@ const Card = ({ id, fontColor, updateStock }) => {
     const formattedDate = `${formattedHours}:${formattedMinutes}, ${currentDate.getDate()}-${currentDate.getMonth() + 1}-${currentDate.getFullYear()}`;
 
     // Print to console.log
-    console.log('Scadere:', formattedDate, code);
+    console.log('Scadere:', formattedDate, code, `Stoc:${stock}`);
   };
 
   /*Stock management code end*/
