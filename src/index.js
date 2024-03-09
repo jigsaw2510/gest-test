@@ -4,6 +4,7 @@ import './index.css';
 import App from './App'
 import reportWebVitals from './reportWebVitals';
 import 'tachyons';
+import RouterComponent from './RouterComponent';
 
 // Set the title before rendering React components
 document.title = 'Gest';
@@ -12,7 +13,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <div>
-      <App />
+      <RouterComponent />
     </div>
   </React.StrictMode>
 );

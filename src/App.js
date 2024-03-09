@@ -3,10 +3,10 @@ import CardList from './CardList';
 import SearchBox from './SearchBox';
 import { getDatabase, ref, get, set } from 'firebase/database';
 import './App.css';
-import Navigation from './Navigation';
 import Footer from './Footer';
 import RightClickDisable from './RightClickDisable';
 import StockHistory from './StockHistory';
+
 
 class App extends Component {
   constructor() {
@@ -85,7 +85,6 @@ class App extends Component {
 
     return (
       <div className="tc app-container">
-        <Navigation />
         <h1>Monumente Funerare</h1>
         <SearchBox searchChange={this.onSearchChange} />
         <CardList monumente={filteredmonumente} updateStock={this.updateStockInFirebase} />
