@@ -6,6 +6,7 @@ import './App.css';
 import Navigation from './Navigation';
 import Footer from './Footer';
 import RightClickDisable from './RightClickDisable';
+import StockHistory from './StockHistory';
 
 class App extends Component {
   constructor() {
@@ -90,6 +91,7 @@ class App extends Component {
         <CardList monumente={filteredmonumente} updateStock={this.updateStockInFirebase} />
         <Footer />
         <RightClickDisable />
+        <StockHistory />
       </div>
 
     );

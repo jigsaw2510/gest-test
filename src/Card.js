@@ -45,10 +45,33 @@ const Card = ({ id, fontColor, updateStock }) => {
   const handleAddStock = () => {
     // Update stock in the database
     updateStock(id, cardData.stock + 1);
-  };
+    // Add changes to history
+    // Get the current date and time
+    const currentDate = new Date();
+
+    // Format the date and time
+    const formattedMinutes = currentDate.getMinutes().toString().padStart(2, '0');
+    const formattedHours = currentDate.getHours().toString().padStart(2, '0');
+    const formattedDate = `${formattedHours}:${formattedMinutes}, ${currentDate.getDate()}-${currentDate.getMonth() + 1}-${currentDate.getFullYear()}`;
+
+    // Print to console.log
+    console.log('Adaugare:', formattedDate, code);
+    }
+
   const handleSubtractStock = () => {
     // Update stock in the database
     updateStock(id, cardData.stock - 1);
+    // Add changes to history
+    // Get the current date and time
+    const currentDate = new Date();
+
+    // Format the date and time
+    const formattedMinutes = currentDate.getMinutes().toString().padStart(2, '0');
+    const formattedHours = currentDate.getHours().toString().padStart(2, '0');
+    const formattedDate = `${formattedHours}:${formattedMinutes}, ${currentDate.getDate()}-${currentDate.getMonth() + 1}-${currentDate.getFullYear()}`;
+
+    // Print to console.log
+    console.log('Scadere:', formattedDate, code);
   };
 
   /*Stock management code end*/
