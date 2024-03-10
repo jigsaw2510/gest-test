@@ -17,7 +17,25 @@ const firebaseConfig = {
   databaseURL: 'https://gest-33df1-default-rtdb.europe-west1.firebasedatabase.app',
 };
 
-// Initialize Firebase
+const historyDatabaseConfig = {
+  apiKey: "AIzaSyDpjq14O3UIum_BnVei7GtZcwbLAHkEwHg",
+  authDomain: "gesthistorydatabase.firebaseapp.com",
+  projectId: "gesthistorydatabase",
+  storageBucket: "gesthistorydatabase.appspot.com",
+  messagingSenderId: "640805037881",
+  appId: "1:640805037881:web:24112b04503a72ce49eae8",
+  measurementId: "G-BL79Q6QH1J",
+  databaseURL: 'https://gesthistorydatabase-default-rtdb.europe-west1.firebasedatabase.app/',
+};
+
+// Initialize first database
 const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
-export { database };  // Exporting the database object
+
+// Initialize second database
+const historyApp = initializeApp(historyDatabaseConfig, 'historyDatabase');
+const historyDatabase = getDatabase(historyApp);
+
+
+
+export { database, historyDatabase };  // Exporting the database object
